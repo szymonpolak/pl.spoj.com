@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class PP0501A {
+public class PRZEDSZK {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numberOfTests = sc.nextInt();
+        byte numberOfTests = sc.nextByte();
         sc.nextLine();
         String[] splittedRow;
         while (numberOfTests > 0) {
-            splittedRow = sc.nextLine().split("\\s+");
-            System.out.println(nwd(Integer.valueOf(splittedRow[0]), Integer.valueOf(splittedRow[1])));
+            splittedRow = sc.nextLine().split(" ");
+            System.out.println(Integer.valueOf(splittedRow[0]) / nwd(Integer.valueOf(splittedRow[0]), Integer.valueOf(splittedRow[1])) * Integer.valueOf(splittedRow[1]));
             numberOfTests--;
         }
     }

@@ -18,12 +18,10 @@ public class PA05_POT {
         Scanner sc = new Scanner(System.in);
         byte numberOfTests = sc.nextByte();
         sc.nextLine();
-        String row;
         String[] splittedRow;
         int base, exponent;
         while (numberOfTests > 0) {
-            row = sc.nextLine();
-            splittedRow = row.split("\\s+");
+            splittedRow = sc.nextLine().split("\\s+");
             base = Integer.valueOf(splittedRow[0]) % 10;
             exponent = Integer.valueOf(splittedRow[1]) % 4;
             System.out.println(repeatingLastDigitsOfPowers[base][exponent]);
